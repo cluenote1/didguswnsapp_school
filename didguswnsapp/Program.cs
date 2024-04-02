@@ -34,6 +34,7 @@ namespace didguswnsapp
             Console.WriteLine(giftBoxList[2].Letter);
             Console.WriteLine("giftbox List Count : " + giftBoxList.Count);
 
+
             for (int i = 0; i < giftBoxes.Length; i++)
             {
                 giftBoxes[i].Letter = (i + 1) + "번째 편지";
@@ -46,10 +47,13 @@ namespace didguswnsapp
             }
         }
 
+        
+
         private static GiftBox GiftBoxMaker(string letter, int money)
         {
             GiftBox address = new GiftBox()
             {
+
                 Letter = letter,
                 Money = money
             };
@@ -59,5 +63,10 @@ namespace didguswnsapp
         }
 
 
+
     }
 }
+
+    
+    
+
