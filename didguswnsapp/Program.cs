@@ -10,23 +10,30 @@ namespace didguswnsapp
         {
             Console.WriteLine("시작 부분");
 
-            int aMoney = 10000;
-            int bMoney = aMoney;
-            aMoney = 20000;
-            Console.WriteLine("aMoney:" + aMoney);
-            Console.WriteLine("bMoney:" + bMoney);
-           
-            GiftBox aGiftBox = new GiftBox()
+            int money = 10000;
+            Console.WriteLine(money);
+            SetMoney(money);
+            Console.WriteLine(money);
+
+            GiftBox giftBox = new GiftBox()
             {
-                Letter = "안녕",
-                Money = 10000,
+                Money = 10000
             };
+            Console.WriteLine(giftBox.Money);
+            SetGiftBox(giftBox);
+            Console.WriteLine(giftBox.Money);
 
-            GiftBox bGiftBox = aGiftBox;
-            bGiftBox.Money = 20000;
-            Console.WriteLine("aGiftBox:" + aGiftBox.Money);
-            Console.WriteLine("bGIftBox:" + bGiftBox.Money);
 
+        }
+
+        static void SetMoney(int needMoney) 
+        {
+            needMoney = 30000;
+        }
+
+        static void SetGiftBox(GiftBox info)
+        {
+            info.Money = 50000;
         }
 
 
